@@ -1,0 +1,42 @@
+for in   for of
+
+5、break和continue语句
+
+    说明：
+
+      break和continue语句用于在循环中精确地控制代码的执行；
+
+      break语句会立即退出循环，强制继续执行循环体后面的语句。
+
+      continue语句跳出当前循环，继续后面的循环。
+
+$:每个函数都包含两个非继承而来的方法：apply()和call();
+
+	·这两个方法的用途都是在特定的作用域调用函数，实际上等于设置函数体内this对象的值。
+
+	·apply()方法接受两个参数:一个是在其中运行函数的作用域，另一个是数组。
+
+	第二个参数可以是Array的实例，也可以是arguments对象。
+
+	·call()方法和apply()作用相同，唯一的区别就是第二个参数只能传数组（传递给函数的参数
+
+	必须逐个列举）。
+
+	例：
+	function sum(num1,num2){
+		return num1+num2;
+	}
+	function callSum1(num1,num2){
+		return sum.apply(this,arguments);   //传入argument
+	}
+	function callSum2(num1,num2){
+		return sum.apply(this,[num1,num2]);  //传入数组
+	}
+
+	function callSum3(num1,num2){
+		return sum.call(this,num1,num2);  //call只能传入数组
+	}
+
+$:ES5中还定义了一个方法:bind();
+
+fetch    axiso
